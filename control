@@ -1,29 +1,57 @@
 Source: chromaprint
-Priority: extra
-Maintainer: Lukáš Lalinský <lalinsky@gmail.com>
-Build-Depends: debhelper (>= 7.0.50~), cmake, libavcodec-dev, libavformat-dev, libfftw3-dev, libgtest-dev, python-all-dev (>= 2.3.5-11)
-Standards-Version: 3.9.1
+Priority: optional
+Maintainer: Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>
+Uploaders: Simon Chopin <chopin.simon@gmail.com>, Reinhard Tartler <siretart@tauware.de>
+Build-Depends:
+ cmake,
+ debhelper (>= 9),
+ libavcodec-dev,
+ libavformat-dev,
+ libavresample-dev,
+ libfftw3-dev,
+ libgtest-dev,
+ python-docutils (>= 0.6)
+Standards-Version: 3.9.8
 Section: libs
-Homepage: http://wiki.acoustid.org/wiki/Chromaprint
-Vcs-Bzr: http://bazaar.launchpad.net/~luks/chromaprint/packaging
-Vcs-Browser: https://code.launchpad.net/~luks/chromaprint/packaging
+Homepage: https://acoustid.org/chromaprint
+Vcs-Git: https://anonscm.debian.org/git/pkg-multimedia/chromaprint.git
+Vcs-Browser: https://anonscm.debian.org/cgit/pkg-multimedia/chromaprint.git
 
 Package: libchromaprint-dev
 Section: libdevel
 Architecture: any
-Depends: libchromaprint0 (= ${binary:Version}), ${misc:Depends}
+Depends:
+ libchromaprint1 (= ${binary:Version}),
+ ${misc:Depends}
 Description: audio fingerprinting library - development files
  Chromaprint is a library for calculating audio fingerprints
- which are used by the Acoustid service.
+ which are used by the Acoustid service. Its main purpose is to provide an
+ accurate identifier for record tracks
  .
  This package includes development files needed to compile programs
  using libchromaprint.
 
-Package: libchromaprint0
-Section: libs
+Package: libchromaprint1
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends}
 Description: audio fingerprint library
- Chromaprint is a library for calculating audio fingerprints,
- which are used by the Acoustid service.
+ Chromaprint is a library for calculating audio fingerprints
+ which are used by the Acoustid service. Its main purpose is to provide an
+ accurate identifier for record tracks
 
+Package: libchromaprint-tools
+Section: sound
+Architecture: any
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends}
+Description: audio fingerprinting library - tools
+ Chromaprint is a library for calculating audio fingerprints
+ which are used by the Acoustid service. Its main purpose is to provide an
+ accurate identifier for record tracks
+ .
+ This package provides the fpcalc utility.

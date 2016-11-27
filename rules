@@ -1,24 +1,27 @@
 #!/usr/bin/make -f
 # -*- makefile -*-
-# Sample debian/rules that uses debhelper.
-# This file was originally written by Joey Hess and Craig Small.
-# As a special exception, when this file is copied by dh-make into a
-# dh-make output file, you may use that output file without restriction.
-# This special exception was added by Craig Small in version 0.37 of dh-make.
+# export DH_VERBOSE=1
 
-# Uncomment this to turn on verbose mode.
-export DH_VERBOSE=1
-
-CONFIGURE_FLAGS = -DCMAKE_BUILD_TYPE=Release -DBUILD_EXAMPLES=ON
+CONFIGURE_FLAGS = -DCMAKE_BUILD_TYPE=Release \
+				  -DBUILD_EXAMPLES=True \
+				  -DLIB_SUFFIX="/$(DEB_HOST_MULTIARCH)" \
 
 # FIXME the tests currently can't run with a out-of-source build
+# TODO: patch the build system to build libgtest and fix the out-of-source
+# problem.
 #ifeq (,$(findstring nocheck,$(DEB_BUILD_OPTIONS)))
 #CONFIGURE_FLAGS += -DBUILD_TESTS=ON
 #endif
 
 %:
-	dh $@
+	dh $@ --parallel
 
 override_dh_auto_configure:
-	@dh_auto_configure -- $(CONFIGURE_FLAGS)
+	dh_auto_configure -- $(CONFIGURE_FLAGS)
 
+override_dh_installman:
+	rst2man debian/fpcalc.rst > debian/fpcalc.1
+	dh_installman
+
+override_dh_installchangelogs:
+	dh_installchangelogs NEWS.txt

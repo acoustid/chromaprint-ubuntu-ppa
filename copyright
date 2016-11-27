@@ -1,41 +1,39 @@
-This work was packaged for Debian by:
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: chromaprint
+Source: https://bitbucket.org/acoustid/chromaprint
 
-    Lukáš Lalinský <lalinsky@gmail.com> on Sat, 23 Oct 2010 20:23:52 +0200
+Files: *
+Copyright: 2010-2012 Lukáš Lalinský <lalinsky@gmail.com>
+License: LGPL-2.1+
 
-It was downloaded from:
+Files: src/avresample/avcodec.h
+Copyright: 2001 Fabrice Bellard
+License: LGPL-2.1+
 
-    http://wiki.acoustid.org/wiki/Chromaprint
+Files: src/avresample/resample2.c
+Copyright: 2004 Michael Nidermayer <michaelni@gmx.at>
+License: LGPL-2.1+
 
-Upstream Author(s):
+Files: debian/*
+Copyright: 2010-2011 Lukáš Lalinský <lalinsky@gmail.com>
+           2011 Clint Adams <clint@debian.org>
+           2011-2014 Simon Chopin <chopin.simon@gmail.com>
+License: LGPL-2.1+
 
-    Lukáš Lalinský <lalinsky@gmail.com>
-
-Copyright:
-
-    Copyright (C) 2010 Lukáš Lalinský
-
-License:
-
-   This library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Lesser General Public
-   License as published by the Free Software Foundation; either
-   version 2.1 of the License, or (at your option) any later version.
-   
-   This library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Lesser General Public License for more details.
-
-   You should have received a copy of the GNU Lesser General Public
-   License along with this library; if not, write to the Free Software
-   Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
-
-On Debian systems, the complete text of the GNU Lesser General Public
-License can be found in /usr/share/common-licenses/LGPL-2.1 file.
-
-The Debian packaging is:
-
-    Copyright (C) 2010 Lukáš Lalinský <lalinsky@gmail.com>
-
-and is licensed under the LGPL version 2.1,
-see "/usr/share/common-licenses/LGPL-2.1".
+License: LGPL-2.1+
+ This library is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public
+ License as published by the Free Software Foundation; either
+ version 2.1 of the License, or (at your option) any later version.
+ .
+ This library is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+ .
+ You should have received a copy of the GNU Lesser General Public
+ License along with this library; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+ .
+ On Debian systems, the complete text of the GNU Lesser General Public
+ License can be found in /usr/share/common-licenses/LGPL-2.1 file.

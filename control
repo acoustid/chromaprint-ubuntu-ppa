@@ -8,7 +8,6 @@ Build-Depends:
  libavcodec-dev,
  libavformat-dev,
  libavresample-dev,
- libfftw3-dev,
  libgtest-dev,
  python-docutils (>= 0.6)
 Standards-Version: 3.9.8

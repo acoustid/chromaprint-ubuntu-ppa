@@ -3,7 +3,7 @@
 # export DH_VERBOSE=1
 
 CONFIGURE_FLAGS = -DCMAKE_BUILD_TYPE=Release \
-				  -DBUILD_EXAMPLES=True \
+				  -DBUILD_TOOLS=True \
 				  -DLIB_SUFFIX="/$(DEB_HOST_MULTIARCH)" \
 
 # FIXME the tests currently can't run with a out-of-source build

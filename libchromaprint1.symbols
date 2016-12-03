@@ -1,23 +1,23 @@
-libchromaprint.so.2 libchromaprint2 #MINVER#
-| libchromaprint2 (>= 2.0.0), libchromaprint2 (<< 2.0.1)
+libchromaprint.so.1 libchromaprint1 #MINVER#
+| libchromaprint1 (>= 1.4.0), libchromaprint1 (<< 1.4.1)
  (regex|optional)"^_ZN?St.*@Base$" 0.6 1
- chromaprint_clear_fingerprint@Base 2.0.0
+ chromaprint_clear_fingerprint@Base 1.4.0
  chromaprint_dealloc@Base 1.3.2
  chromaprint_decode_fingerprint@Base 1.3.2
  chromaprint_encode_fingerprint@Base 1.3.2
  chromaprint_feed@Base 1.3.2
  chromaprint_finish@Base 1.3.2
  chromaprint_free@Base 1.3.2
- chromaprint_get_delay@Base 2.0.0
- chromaprint_get_delay_ms@Base 2.0.0
+ chromaprint_get_delay@Base 1.4.0
+ chromaprint_get_delay_ms@Base 1.4.0
  chromaprint_get_fingerprint@Base 1.3.2
  chromaprint_get_fingerprint_hash@Base 1.3.2
- chromaprint_get_item_duration@Base 2.0.0
- chromaprint_get_item_duration_ms@Base 2.0.0
- chromaprint_get_num_channels@Base 2.0.0
+ chromaprint_get_item_duration@Base 1.4.0
+ chromaprint_get_item_duration_ms@Base 1.4.0
+ chromaprint_get_num_channels@Base 1.4.0
  chromaprint_get_raw_fingerprint@Base 1.3.2
- chromaprint_get_raw_fingerprint_size@Base 2.0.0
- chromaprint_get_sample_rate@Base 2.0.0
+ chromaprint_get_raw_fingerprint_size@Base 1.4.0
+ chromaprint_get_sample_rate@Base 1.4.0
  chromaprint_get_version@Base 1.3.2
  chromaprint_hash_fingerprint@Base 1.3.2
  chromaprint_new@Base 1.3.2

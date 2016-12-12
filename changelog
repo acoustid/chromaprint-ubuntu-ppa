@@ -1,4 +1,4 @@
-chromaprint (1.4-0) UNRELEASED; urgency=medium
+chromaprint (1.4.1-0) UNRELEASED; urgency=medium
 
   * New upstream release.
   * debian/libchromaprint1.symbols: Add new symbols.
